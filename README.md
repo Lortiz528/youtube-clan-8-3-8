@@ -1,3 +1,9 @@
+Group members: Luis Ortiz, Stephanie Frias, Josie Piscasio.
+
+Trello Board link: https://trello.com/b/szRH7WzT/project-management-for-youtube
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
