@@ -23,8 +23,11 @@ josie-features
           target="_blank"
           rel="noopener noreferrer"
         >
+
+          Learn React LEARN REACT TEST test
+        </a>
+
           Learn React and more and even more!
- main
       </header>
     </div>
   );
