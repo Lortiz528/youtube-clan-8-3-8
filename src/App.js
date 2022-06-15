@@ -3,8 +3,9 @@ import Navbar from './components/common/Navbar';
 import About from './components/pages/about'
 import Home from './components/pages/home'
 import Header from './components/common/header'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Footer from './components/common/Footer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
 
 
 function App() {
