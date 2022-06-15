@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import Searchbar from './components/Searchbar';
-import About from './components/About';
-import Home from './components/pages/Home';
+import Searchbar from './components/pages/Searchbar';
+import About from './components/pages/about';
+import Home from './components/pages/home';
 import Header from './components/common/header';
 import Footer from './components/common/Footer';
 
