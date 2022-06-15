@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import Searchbar from './components/Searchbar';
 import About from './components/About';
-import Home from './components/pages/home';
+import Home from './components/pages/Home';
 import Header from './components/common/header';
 import Footer from './components/common/Footer';
 
@@ -38,7 +38,7 @@ class App extends React.Component {
             <Searchbar />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/src/components/pages/about.js" element={<About />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </main>
         </div>
