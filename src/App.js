@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import Searchbar from './components/Searchbar';
-import About from './components/About';
-import Test from './components/Test';
+import Searchbar from './components/pages/Searchbar';
 import Home from './components/pages/home';
 import Header from './components/common/header';
 import Footer from './components/common/footer';
+import About from './components/pages/about';
+
 
 class App extends React.Component {
   constructor() {
@@ -39,7 +38,7 @@ class App extends React.Component {
             <Searchbar />
             <Routes>
               <Route path="/about" element={<About />} />
-              <Route path="/test" element={<Test />} />
+              
               <Route path="/" element={<Home />} />
               <Route path="/src/components/pages/about.js" element={<About />} />
             </Routes>
