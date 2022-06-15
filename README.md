@@ -1,4 +1,4 @@
-Group members: Luis Ortiz, Stephanie Frias, Josie Piscasio.
+# Group members: Luis Ortiz, Stephanie Frias, Josie Piscasio.
 
 Trello Board link: https://trello.com/b/szRH7WzT/project-management-for-youtube
 
