@@ -13,7 +13,7 @@ function App() {
     <Router>
     <Header />
     <div className="wrapper">
-    <Nav />
+    <Navbar />
     <main>
     <Routes>
      <Route path = "/" element={<Home/>} />
