@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
-import Navbar from './Navbar';
+import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
+import Searchbar from './components/Searchbar';
+import About from './components/About';
 
 class App extends React.Component {
   constructor() {
@@ -14,8 +16,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <p>Hello world(test)</p>
+        <Navbar />
+        <Searchbar />
         <Routes>
-          <Route path="/" element={<Navbar />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     );
