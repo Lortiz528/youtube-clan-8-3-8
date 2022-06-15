@@ -9,6 +9,23 @@ import Header from './components/common/header';
 import Footer from './components/common/Footer';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  handleApi = () => {
+    fetch(
+      `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
+    )
+    .then((response) => response.json())
+    .then((json) => {})
+  };
+
+  componentDidMount() {
+    this.handleApi();
+  }
+
   render() {
     return (
       <div className="App">
