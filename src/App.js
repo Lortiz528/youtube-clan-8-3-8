@@ -5,18 +5,30 @@ import { Routes, Route } from 'react-router-dom';
 import Searchbar from './components/Searchbar';
 import About from './components/About';
 import Test from './components/Test';
+import Home from './components/pages/home';
+import Header from './components/common/header';
+import Footer from './components/common/footer';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
-        <br></br>
-        <Searchbar />
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/test" element={<Test />} />
-        </Routes>
+        <div className="NavBAR">
+          <Header />
+          <Navbar />
+        </div>
+        <div className="wrapper">
+          <main>
+            <Searchbar />
+            <Routes>
+              <Route path="/about" element={<About />} />
+              <Route path="/test" element={<Test />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/src/components/pages/about.js" element={<About />} />
+            </Routes>
+          </main>
+        </div>
+        <Footer />
       </div>
     );
   }
