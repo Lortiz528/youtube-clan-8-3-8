@@ -34,7 +34,7 @@ export default function About() {
               src="https://avatars.githubusercontent.com/u/96319104?v=4"
               alt="Josie"
             />
-            <p>Josie about paragraph</p>
+            <p>I am Full Stack Software Engineer in the NYC with a Bachelor/'s Degree and 6+ years professional experience in Business Administration. I am a naturally curious person which makes me want to always learn new things, a problem-solver who questions everything, and a hard worker who doesn't take life too seriously and enjoys the little small things in life like pizza.🍕</p>
             <a href="https://github.com/named-josie">Josies's GitHub</a>
           </div>
           <div>
