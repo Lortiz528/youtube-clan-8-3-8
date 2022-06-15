@@ -1,17 +1,18 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
-const Navbar = () => {
-  return (
-    <div>
-      <p>Youtube</p>
-      <link to={'/'}>
-        <h3>Home</h3>
-      </link>
-      <Link to="/about">
-        <h3>About</h3>
-      </Link>
-    </div>
-  );
-};
+class Navbar extends React.Component {
+  render() {
+    return (
+      <div className="navbar">
+        <h3>Youtube</h3>
+        <Link to="/"> Home</Link>
+        <br></br>
+        <Link to="/about">About</Link>
+      </div>
+    );
+  }
+}
 
 export default Navbar;
