@@ -4,7 +4,7 @@ export default function Header() {
       return (
         <header>
         <Link to="/">
-        <h1>YouTube</h1>
+        <img  src='https://1000logos.net/wp-content/uploads/2017/05/YouTube-Logo-2015.jpg' alt="image" />
         </Link>
         </header>
       );
