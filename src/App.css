@@ -6,4 +6,26 @@ footer {
     background-color: red;
     color: white;
     text-align: center;
+ 
   }
+
+  img{
+    height: 150px;
+    width: 150px;
+}
+
+nav{
+display: grid;
+grid-template-columns:repeat(4, 1fr);
+    background-color:red;
+}
+
+.NavBAR{
+  padding-bottom: 20px;
+}
+
+
+button{
+  background-color: salmon;
+  border-radius: 20px;
+}
