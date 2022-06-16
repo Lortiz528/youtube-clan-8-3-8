@@ -3,44 +3,65 @@ import './App.css';
 import Navbar from './components/common/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import Searchbar from './components/pages/Searchbar';
-import About from './components/pages/about';
-import Home from './components/pages/home';
-import Header from './components/common/header';
+import About from './components/pages/About';
+import Home from './components/pages/Home';
+import Header from './components/common/Header';
 import Footer from './components/common/Footer';
+import VideoList from './components/pages/VideoList';
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      searchResults: [],
+      userInput: '',
+      noUserInput: 'No Search Results Yet! Please submit a search above!',
+    };
   }
+  // landing page will have the noUserInput text displayed below the search bar
 
-  handleApi = () => {
-    fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
-    )
-    .then((response) => response.json())
-    .then((json) => {})
+  inputHandler = (event) => {
+    this.setState({
+      userInput: event.target.value,
+    });
   };
 
-  componentDidMount() {
-    this.handleApi();
-  }
+  clearInputHandler = () => {
+    this.setState({
+      searchResults: [],
+      noSearch: 'No Search Results Yet! Please submit a search above!',
+    });
+  };
+
+  // handleApi = () => {
+  //   fetch(
+  //     `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
+  //   )
+  //   .then((response) => response.json())
+  //   .then((json) => {})
+  // };
+
+  // componentDidMount() {
+  //   this.handleApi();
+  // }
 
   render() {
     return (
       <div className="App">
+        <Header />
         <div className="NavBAR">
-          <Header />
-          <Navbar />
+          <Navbar clearInputhandler={this.clearInputHandler} />
         </div>
+
         <div className="wrapper">
-          <main>
-            <Searchbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/src/components/pages/about.js" element={<About />} />
-            </Routes>
-          </main>
+          <Routes>
+            <Route
+              path="/"
+              element={<Home videos={this.state.searchResults} />}
+            />
+            <Route path="/about" element={<About />} />
+            {/* <Route path="/videos/:id" element={VideoList} /> */}
+          </Routes>
         </div>
         <Footer />
       </div>
