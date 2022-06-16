@@ -1,8 +1,15 @@
-export default function Home() {
+import React from 'react';
+import Searchbar from './Searchbar';
+
+
+class Home extends React.Component {
+  render() {
     return (
-        <section>
-                <h2>Welcome</h2>
-            
-        </section>
+      <div>
+        <Searchbar />
+      </div>
     );
-  };
+  }
+}
+
+export default Home;
