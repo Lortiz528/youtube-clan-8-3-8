@@ -14,7 +14,7 @@ class Form extends React.Component {
       event.preventDefault()
       console.log(event)
       let { comments, userName, comment } = this.state
-      let newComment = `${userName} says, "${comment}"`
+      let newComment = `${userName} :  "${comment}"`
       this.setState({ comments: [...comments, newComment] })
       event.target.reset()
     }
@@ -34,7 +34,7 @@ class Form extends React.Component {
   
       return (
         <section className='notes'>
-          <h3>1-on-1 Notes</h3>
+          <h5>Comments</h5>
           <form onSubmit={this.handleSubmit}>
             <label>  Name:  </label>
             <input

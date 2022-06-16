@@ -1,4 +1,4 @@
-import Form from './form';
+import Form from './Form';
 import React from 'react';
 
 class Video extends React.Component {
