@@ -6,7 +6,7 @@ class VideoList extends React.Component {
     return (
       <div>
         <h4>(placeholder)-Video Search Results Below:</h4>
-      <Video/>
+      
       </div>
     );
   }
