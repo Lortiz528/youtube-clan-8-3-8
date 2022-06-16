@@ -46,7 +46,7 @@ class Form extends React.Component {
             />
             <br />
             <br />
-            <label> Message: </label>
+            <label> Comment: </label>
             <input
               id='text'
               name='value'

@@ -5,7 +5,6 @@ import { Routes, Route } from 'react-router-dom';
 import Searchbar from './components/pages/Searchbar';
 import About from './components/pages/about'
 import Home from './components/pages/home';
-import Header from './components/common/header';
 import Footer from './components/common/footer';
 import VideoList from './components/pages/VideoList';
 
@@ -48,7 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header />
+       
         <div className="NavBAR">
           <Navbar clearInputhandler={this.clearInputHandler} />
         </div>
