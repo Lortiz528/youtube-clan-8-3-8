@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/common/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import Searchbar from './components/pages/Searchbar';
 import About from './components/pages/about'
 import Home from './components/pages/home';
 import Footer from './components/common/footer';
@@ -28,7 +27,7 @@ class App extends React.Component {
   clearInputHandler = () => {
     this.setState({
       searchResults: [],
-      noSearch: 'No Search Results Yet! Please submit a search above!',
+      noUserInput: 'No Search Results Yet! Please submit a search above!',
     });
   };
 
@@ -47,11 +46,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-       
         <div className="NavBAR">
           <Navbar clearInputhandler={this.clearInputHandler} />
         </div>
-
         <div className="wrapper">
           <Routes>
             <Route
