@@ -1,9 +1,14 @@
-import { Link, Routes, Route } from 'react-router-dom';
+import Form from './form';
 import React from 'react';
 
 class Video extends React.Component {
   render() {
-    return <p>single video</p>;
+    return (
+    <div>
+    <p>single video</p>;
+    <Form/>
+    </div>
+    )
   }
 }
 
