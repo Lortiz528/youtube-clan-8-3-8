@@ -29,3 +29,7 @@ button{
   background-color: salmon;
   border-radius: 20px;
 }
+
+.wrapper{
+  text-align: center;
+}
