@@ -12,7 +12,7 @@ export default function About() {
       <div>
         <div>
           <h3>Luis Ortiz</h3>
-          <img
+          <img className="profile"
             src="https://avatars.githubusercontent.com/u/96318347?v=4"
             alt="Luis"
           />
@@ -29,7 +29,7 @@ export default function About() {
 
         <div>
           <h3>Josie Pascasio</h3>
-          <img
+          <img className="profile"
             src="https://avatars.githubusercontent.com/u/96319104?v=4"
             alt="Josie"
           />
@@ -45,7 +45,7 @@ export default function About() {
         </div>
         <div>
           <h3>Stephanie Frias</h3>
-          <img
+          <img className="profile"
             src="https://avatars.githubusercontent.com/u/96318625?v=4"
             alt="Stephanie"
           />

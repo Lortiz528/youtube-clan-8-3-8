@@ -65,14 +65,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="NavBAR">
           <Navbar />
-        </div>
         <div className="wrapper">
           <Routes>
             <Route
               path="/"
               element={
+                
                 <Home
                   handleApi={this.handleApi}
                   searchHandler={this.searchHandler}
