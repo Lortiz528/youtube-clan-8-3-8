@@ -2,12 +2,16 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/common/Navbar';
 import { Routes, Route } from 'react-router-dom';
+
 import About from './components/pages/About';
 import Home from './components/pages/Home';
 import Footer from './components/common/Footer';
+
 import Video from './components/pages/Video';
 
+
 class App extends React.Component {
+
   render() {
     return (
       <div className="App">
@@ -21,6 +25,7 @@ class App extends React.Component {
             <Route path="/videos/:id" element={<Video />} />
           </Routes>
         </div>
+       
         <Footer />
       </div>
     );
