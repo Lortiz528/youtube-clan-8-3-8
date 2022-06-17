@@ -4,7 +4,7 @@ import Navbar from './components/common/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import About from './components/pages/About';
 import Home from './components/pages/Home';
-import Footer from './components/common/footer';
+import Footer from './components/common/Footer';
 import Video from './components/pages/Video';
 
 class App extends React.Component {
@@ -33,6 +33,12 @@ class App extends React.Component {
     }
   };
 
+  clearSearch=()=>{
+    this.setState({
+      searchResults:[]
+    })
+  }
+
   handleApi = (userInput) => {
     fetch(
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${userInput}&key=${process.env.REACT_APP_API_KEY}`
@@ -45,19 +51,6 @@ class App extends React.Component {
       });
   };
 
- 
-  //       const videoData = json.items;
-  //       let tubes = videoData.map((video) => {
-  //         return {
-  //           vidTitle: video.snippet.title,
-  //           thumbnail: video.snippet.thumbnails.default.url,
-  //           videoId: video.id.videoId,
-  //         };
-  //       });
-  //       this.setState({ searchResults: tubes });
-  //     });
-  // };
-
   // componentDidMount() {
   //   this.handleApi();
   // }
@@ -66,7 +59,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="NavBAR">
-          <Navbar />
+          <Navbar clearSearch={this.clearSearch}/>
         </div>
         <div className="wrapper">
           <Routes>
@@ -78,13 +71,14 @@ class App extends React.Component {
                   searchHandler={this.searchHandler}
                   searchResults={this.state.searchResults}
                   userInput={this.state.userInput}
+                  inputHandler={this.inputHandler}
                 />
               }
             />
             <Route path="/about" element={<About />} />
             <Route path="/video/:id" element={<Video />} />
           </Routes>
-          
+
           {this.state.searchResults.length === 0 ? (
             <h4>No Search Results Yet!, Please submit a search above!</h4>
           ) : null}
