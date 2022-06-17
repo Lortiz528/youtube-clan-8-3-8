@@ -1,27 +1,20 @@
 import React from 'react';
 
 class Searchbar extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      userInput: '',
-    };
-  }
-
- 
-
   render() {
-    const { searchHandler, inputHandler } = this.props;
+    const { searchHandler, inputHandler, userInput } = this.props;
     return (
       <div>
-        <form onSubmit={(event)=>searchHandler(event)}>
+        <form onSubmit={(event) => searchHandler(event)}>
           <input
-            onChange={this.inputHandler}
-            value={this.state.userInput}
+            onChange={inputHandler}
+            value={userInput}
             type="text"
             placeholder="Search"
           ></input>
-          <button>Search</button>
+          <button id="submit-button" type="submit">
+            Search
+          </button>
         </form>
         <br></br>
       </div>
