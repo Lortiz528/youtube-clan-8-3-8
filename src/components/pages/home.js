@@ -28,12 +28,6 @@ class Home extends React.Component {
     }
   };
 
-  clearSearch=()=>{
-    this.setState({
-      searchResults:[]
-    })
-  }
-
   handleApi = (userInput) => {
     fetch(
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`
@@ -46,12 +40,8 @@ class Home extends React.Component {
       });
   };
 
-  
-
-
   render() {
-    const {  searchHandler, inputHandler, searchResults, userInput } =
-      this.props;
+    const { searchResults } = this.state;
 
     let tubes = searchResults.map((video) => {
       return (
@@ -71,12 +61,15 @@ class Home extends React.Component {
       <div>
         <div>
           <Searchbar
-            searchHandler={searchHandler}
-            inputHandler={inputHandler}
-            userInput={userInput}
+            searchHandler={this.searchHandler}
+            inputHandler={this.inputHandler}
+            userInput={this.state.userInput}
             handleApi={this.handleApi}
           />
         </div>
+        {!this.state.searchResults.length ? (
+          <h4>No Search Results Yet!, Please submit a search above!</h4>
+        ) : null}
         {tubes}
       </div>
     );

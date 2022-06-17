@@ -4,11 +4,23 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 
 class Navbar extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      searchResults: [],
+      userInput: '',
+    };
+  }
+  clearSearch = () => {
+    this.setState({
+      searchResults: [],
+    });
+  };
+
   render() {
-    const { clearSearch } = this.props;
     return (
       <nav>
-        <Header clearSearch={clearSearch} />
+        <Header clearSearch={this.clearSearch} />
         <Link to="/">
           <h3>Home</h3>
         </Link>
