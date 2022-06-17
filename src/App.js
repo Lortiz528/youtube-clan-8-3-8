@@ -97,7 +97,7 @@ class App extends React.Component {
             <h4>No Search Results Yet!, Please submit a search above!</h4>
           ) : null}
         </div>
-        <Error/>
+       
         <Footer />
       </div>
     );
