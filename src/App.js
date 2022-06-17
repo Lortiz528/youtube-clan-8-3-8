@@ -41,7 +41,7 @@ class App extends React.Component {
 
   handleApi = (userInput) => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${userInput}&key=${process.env.REACT_APP_API_KEY}`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`
     )
       .then((response) => response.json())
       .then((json) => {
@@ -51,9 +51,6 @@ class App extends React.Component {
       });
   };
 
-  // componentDidMount() {
-  //   this.handleApi();
-  // }
 
   render() {
     return (
@@ -76,10 +73,10 @@ class App extends React.Component {
               }
             />
             <Route path="/about" element={<About />} />
-            <Route path="/video/:id" element={<Video />} />
+            <Route path="/videos/:id" element={<Video />} />
           </Routes>
 
-          {this.state.searchResults.length === 0 ? (
+          {!this.state.searchResults.length ? (
             <h4>No Search Results Yet!, Please submit a search above!</h4>
           ) : null}
         </div>

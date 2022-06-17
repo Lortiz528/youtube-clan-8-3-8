@@ -1,15 +1,21 @@
-import Form from './Form';
 import React from 'react';
+import Form from './Form';
+import { useParams } from 'react-router-dom';
+import YouTube from 'react-youtube';
 
-class Video extends React.Component {
-  render() {
-    return (
+function Video() {
+  const videoId = useParams().id;
+
+  return (
     <div>
-    <p>single video</p>;
-    <Form/>
+      <section>
+        <YouTube videoId={videoId} />
+      </section>
+      <section>
+        <Form />
+      </section>
     </div>
-    )
-  }
+  );
 }
 
 export default Video;
