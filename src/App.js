@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/common/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import About from './components/pages/About';
-import Home from './components/pages/Home';
+import About from './components/pages/about';
+import Home from './components/pages/home';
 import Footer from './components/common/footer';
 import Video from './components/pages/Video';
 
