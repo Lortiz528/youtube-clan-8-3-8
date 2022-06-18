@@ -1,0 +1,17 @@
+.input-container {
+    
+    align-items: center;
+    width: 20%;
+    border: 1px solid #d3d3d3;
+
+}
+
+
+.search-icon {
+    height: 10px;
+}
+
+.input-container  {
+    flex: 1;
+    border: none;
+}

@@ -4,9 +4,9 @@ import "./Error404.css"
 function ErrorPage(props) { 
   return (
     < ErrorPage {...props}
-    size='lg'
-    aria-labelledby="contained-modal-title-vcenter"
-      centered
+    // size='lg'
+    // aria-labelledby="contained-modal-title-vcenter"
+    //   centered
     >
     <div className="modal">
       <div className="modal-content">
@@ -24,3 +24,5 @@ function ErrorPage(props) {
     </ErrorPage>
   )
 }
+
+export default ErrorPage

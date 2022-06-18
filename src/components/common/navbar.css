@@ -1,0 +1,25 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #f7f7f7;
+  }
+   
+  .logo {
+  height: 27px;
+  margin-left: 20px;
+  object-fit: contain;
+   }
+
+   .special-icons {
+    display: flex;
+    align-items: center;
+    }
+    
+    .iconic {
+        margin-right: 10px;
+    }
