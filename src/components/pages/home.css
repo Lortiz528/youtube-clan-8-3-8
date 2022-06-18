@@ -1,17 +1,29 @@
-.input-container {
-    
-    align-items: center;
-    width: 20%;
-    border: 1px solid #d3d3d3;
-
-}
 
 
 .search-icon {
     height: 10px;
 }
 
-.input-container  {
+.input-container {
+    display: flex;
+    width: 30%;
+    border: 1px solid #d3d3d3;
+    margin: auto;
+    margin-top: 15px;
+   
+}
+.input-container > input {
     flex: 1;
     border: none;
+
+}
+
+.no-results {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    height: 60px;
+    width: 50%;
+    margin: auto;
+    color: aqua;
+    
 }

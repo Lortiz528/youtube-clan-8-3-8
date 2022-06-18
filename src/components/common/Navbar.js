@@ -33,7 +33,7 @@ class Navbar extends React.Component {
       <AppsIcon className='iconic'/>
       <NotificationsIcon className='iconic'/>
       <Avatar 
-      src='https://www.digitaltveurope.com/files/2019/12/Baby-Yoda-Soup.jpg' alt='RICK' />
+      src='https://www.digitaltveurope.com/files/2019/12/Baby-Yoda-Soup.jpg' alt='Baby Yoda' />
       </div>
       </nav>
     );

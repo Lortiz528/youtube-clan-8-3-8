@@ -59,7 +59,7 @@ class Home extends React.Component {
     });
 
     return (
-      <div>
+      <div className='home-page'>
         <div>
           <Searchbar
             searchHandler={this.searchHandler}
@@ -69,7 +69,7 @@ class Home extends React.Component {
           />
         </div>
         {!this.state.searchResults.length ? (
-          <h4>No Search Results Yet!, Please submit a search above!</h4>
+           <div className='no-results' ><h4>No Search Results Yet!, Please submit a search above!</h4></div>
         ) : null}
         {tubes}
       </div>

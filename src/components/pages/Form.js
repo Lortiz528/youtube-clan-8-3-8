@@ -56,7 +56,7 @@ class Form extends React.Component {
             />
             <br />
             <br />
-            <button type='submit'>Add Note</button>
+            <button type='submit'>Add Comment</button>
           </form>
           <div>
             <ul>

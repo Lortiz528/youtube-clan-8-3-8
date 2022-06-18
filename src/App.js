@@ -15,10 +15,10 @@ import Video from './components/pages/Video';
     return (
       <div className="App">
        
-        <div className="NavBAR">
+        
         {/* <ErrorPage /> */}
           <Navbar />
-        </div>
+        
         
         <div className="wrapper">
           <Routes>

@@ -1,13 +1,17 @@
 footer {
     position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
+    height: 5%;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-color: rgb(105, 193, 152);
     color: white;
-    text-align: center;
-    align-items: center;
-  justify-content: space-between;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    clear: both;
+    opacity: 0.9;
  
   }
 
@@ -18,9 +22,7 @@ footer {
 
 
 
-.NavBAR{
-  padding-bottom: 20px;
-}
+
 
 
 
@@ -28,3 +30,4 @@ footer {
 .wrapper{
   text-align: center;
 }
+
