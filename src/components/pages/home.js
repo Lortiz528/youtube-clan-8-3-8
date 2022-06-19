@@ -47,7 +47,7 @@ class Home extends React.Component {
     let tubes = searchResults.map((video) => {
       return (
         <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-          <div>
+          <div className='results'>
             <img
               src={video.snippet.thumbnails.default.url}
               alt={video.snippet.description}

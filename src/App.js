@@ -1,22 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/common/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import About from './components/pages/About';
 import Home from './components/pages/Home';
 import Footer from './components/common/Footer';
-// import ErrorPage from './ErrorPage'
 import Video from './components/pages/Video';
+import ErrorPage from './ErrorPage';
 
 
- function App () {
-
+export default function App () {
+const [show, setShow] = useState(false)
    
     return (
       <div className="App">
-       
+       <button onClick={()=> setShow(true)}>Show Modal</button><ErrorPage show={show}/>
         
-        {/* <ErrorPage /> */}
+     
           <Navbar />
         
         
@@ -25,6 +25,7 @@ import Video from './components/pages/Video';
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/videos/:id" element={<Video />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
        
@@ -34,4 +35,4 @@ import Video from './components/pages/Video';
   }
 
 
-export default App;
+ 

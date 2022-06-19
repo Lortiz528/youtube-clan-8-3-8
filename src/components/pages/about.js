@@ -1,9 +1,10 @@
 export default function About() {
   return (
-    <div>
+    <div className="aboutpage">
       <div>
-        Welcome to our youtube clone app. Search for YouTube videos,
-        then choose a video from a list to watch and comment.
+        <article>Welcome to our YouTube Clone. Enables a search feature to find any  video within the youtube data api, Once video is selected you may watch and leave a comment. 
+        Thank you
+        </article>
       </div>
       <br />
 
@@ -28,7 +29,7 @@ export default function About() {
         </div>
 
         <div>
-          <h3>Josie Pascasio</h3>
+          <h3>Jossy Pascasio</h3>
           <img className="profile"
             src="https://avatars.githubusercontent.com/u/96319104?v=4"
             alt="Josie"
@@ -41,7 +42,7 @@ export default function About() {
             everything, and a hard worker who doesn't take life too seriously
             and enjoys the  little small things in life like pizza.🍕
           </p>
-          <a href="https://github.com/named-josie">Josies's GitHub</a>
+          <a href="https://github.com/named-josie">Jossy's GitHub</a>
         </div>
         <div>
           <h3>Stephanie Frias</h3>

@@ -10,7 +10,7 @@ class Header extends React.Component {
          <MenuIcon />
         <Link to="/" onClick={clearSearch}>
           <img className='logo'
-            src="https://1000logos.net/wp-content/uploads/2017/05/YouTube-Logo-2015.jpg"
+            src="https://thumbs.gfycat.com/PhysicalAlertBeaver-max-1mb.gif"
             alt="youtube"
           />
         </Link>

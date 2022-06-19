@@ -19,11 +19,17 @@
 }
 
 .no-results {
-    background-color: rgb(0, 0, 0);
     padding: 20px;
     height: 60px;
     width: 50%;
     margin: auto;
-    color: aqua;
+    color: #ebf0f0;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.8200455580865604) 0%, rgba(135,158,194,1) 84%);
+    border-radius: 10px;
     
+    
+}
+.results {
+    display: flex;
 }

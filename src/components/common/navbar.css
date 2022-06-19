@@ -6,13 +6,15 @@ nav{
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: #f7f7f7;
-  }
-   
+   width: 100%;
+   background-color: #faf9fb;
+}
+
   .logo {
-  height: 27px;
+  height: 40px;
   margin-left: 20px;
   object-fit: contain;
+  border-radius: 10px;
    }
 
    .special-icons {
