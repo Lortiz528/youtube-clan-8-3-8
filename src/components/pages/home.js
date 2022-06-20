@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Searchbar from './Searchbar';
-import { Avatar } from '@mui/material';
+
 import './home.css';
 
 class Home extends React.Component {
@@ -48,6 +48,7 @@ class Home extends React.Component {
     let tubes = searchResults.map((video) => {
       return (
         <div>
+
           <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
             <div className='results'>
               <img
@@ -65,12 +66,13 @@ class Home extends React.Component {
             <p>{video.snippet.channelTitle}</p>
             <p>{video.snippet.description}</p>
           </div>
+
         </div>
       );
     });
 
     return (
-      <div className='home-page'>
+      <div className="home-page">
         <div>
           <Searchbar
             searchHandler={this.searchHandler}
@@ -80,7 +82,9 @@ class Home extends React.Component {
           />
         </div>
         {!this.state.searchResults.length ? (
+
           <div className='no-results'>
+
             <h4>No Search Results Yet!, Please submit a search above!</h4>
           </div>
         ) : null}
