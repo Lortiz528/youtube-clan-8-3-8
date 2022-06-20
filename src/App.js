@@ -9,25 +9,20 @@ import Footer from './components/common/Footer';
 
 import Video from './components/pages/Video';
 
-export default function App () {
+export default function App() {
+  return (
+    <div className="App">
+      <Navbar />
 
-   
-    return (
-      <div className="App">
-      
-     
-          <Navbar />
-        
-        <div className="wrapper">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/videos/:id" element={<Video />} />
-          </Routes>
-        </div>
-       
-        <Footer />
+      <div className="wrapper">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/videos/:id" element={<Video />} />
+        </Routes>
       </div>
-    );
-  }
 
+      <Footer />
+    </div>
+  );
+}
