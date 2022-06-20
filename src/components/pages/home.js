@@ -47,51 +47,48 @@ class Home extends React.Component {
 
     let tubes = searchResults.map((video) => {
       return (
-        <div>
-
-          <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-            <div className='results'>
-              <img
-                className='thumbnail'
-                src={video.snippet.thumbnails.medium.url}
-                alt={video.snippet.description}
-              />
-              <div className='video-title'>
-                {' '}
-                <h4>{video.snippet.title}</h4>{' '}
-              </div>
-            </div>
-          </Link>
-          <div className='video-text'>
-            <p>{video.snippet.channelTitle}</p>
-            <p>{video.snippet.description}</p>
-          </div>
-
+        <div className='video-card' key={video.id.videoId}>
+        <Link to={`/videos/${video.id.videoId}`}>
+          <div className='results'>
+            <img
+              className='thumbnail'
+              src={video.snippet.thumbnails.medium.url}
+              alt={video.snippet.thumbnails.high.url}
+            />
+             {/* <div className='video-info'>
+              <Avatar className='video-avatar' alt={video.snippet.channelTitle}/>
+              </div> */}
+        <div className='video-text'>
+          <h4>{video.snippet.title}</h4>
+          {/* <p>{video.snippet.description}</p> */}
         </div>
-      );
-    });
-
-    return (
-      <div className="home-page">
-        <div>
-          <Searchbar
-            searchHandler={this.searchHandler}
-            inputHandler={this.inputHandler}
-            userInput={this.state.userInput}
-            handleApi={this.handleApi}
-          />
         </div>
-        {!this.state.searchResults.length ? (
-
-          <div className='no-results'>
-
-            <h4>No Search Results Yet!, Please submit a search above!</h4>
-          </div>
-        ) : null}
-        {tubes}
+        </Link>
       </div>
     );
-  }
+  });
+
+  return (
+    <div className="home-page">
+      <div>
+        <Searchbar
+          searchHandler={this.searchHandler}
+          inputHandler={this.inputHandler}
+          userInput={this.state.userInput}
+          handleApi={this.handleApi}
+        />
+      </div>
+      {!this.state.searchResults.length ? (
+
+        <div className='no-results'>
+
+          <h4>No Search Results Yet!, Please submit a search above!</h4>
+        </div>
+      ) : null}
+      {tubes}
+    </div>
+  );
+}
 }
 
 export default Home;

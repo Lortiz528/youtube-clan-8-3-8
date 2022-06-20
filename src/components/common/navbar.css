@@ -21,7 +21,13 @@ nav{
     display: flex;
     align-items: center;
     }
-    
+    .other-icons:hover {
+        color: #ba1d1d !important;
+        }
+    .special-icons :hover {
+        color: #ba1d1d !important;
+        }
+
     .iconic {
         margin-right: 10px;
     }
