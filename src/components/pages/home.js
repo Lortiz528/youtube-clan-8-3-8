@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Searchbar from './Searchbar';
-import './home.css'
+import './home.css';
 
 class Home extends React.Component {
   constructor() {
@@ -46,20 +46,25 @@ class Home extends React.Component {
 
     let tubes = searchResults.map((video) => {
       return (
-        <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-          <div className='results'>
-            <img className='thumbnail'
-              src={video.snippet.thumbnails.default.url}
-              alt={video.snippet.description}
-            />
-            <div className='video-title'>{video.snippet.title}</div>
-          </div>
-        </Link>
+        <div>
+          <h5>Channel: {video.snippet.channelTitle}</h5>
+          <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
+            <div className="results">
+              <img
+                className="thumbnail"
+                src={video.snippet.thumbnails.default.url}
+                alt={video.snippet.description}
+              />
+              <div className="video-title">{video.snippet.title}</div>
+            </div>
+          </Link>
+          <p>{video.snippet.description}</p>
+        </div>
       );
     });
 
     return (
-      <div className='home-page'>
+      <div className="home-page">
         <div>
           <Searchbar
             searchHandler={this.searchHandler}
@@ -69,7 +74,9 @@ class Home extends React.Component {
           />
         </div>
         {!this.state.searchResults.length ? (
-           <div className='no-results' ><h4>No Search Results Yet!, Please submit a search above!</h4></div>
+          <div className="no-results">
+            <h4>No Search Results Yet!, Please submit a search above!</h4>
+          </div>
         ) : null}
         {tubes}
       </div>
