@@ -1,64 +1,118 @@
-
-
-.search-icon {
+search-icon {
     height: 10px;
 }
 
 .input-container {
     display: flex;
-    width: 30%;
+    width: 80%;
     border: 1px solid #d3d3d3;
     margin: auto;
     margin-top: 15px;
+    
+    
    
 }
 .input-container > input {
     flex: 1;
     border: none;
+    
 
 }
 
 .no-results {
     padding: 20px;
     height: 60px;
-    width: 50%;
+    width: 80%;
     margin: auto;
     color: #ebf0f0;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.8200455580865604) 0%, rgba(135,158,194,1) 84%);
     border-radius: 10px;
-    
+    text-align: center;
+    display: flex;
+  flex-wrap: wrap;
     
 }
-.results {
+
+.video-card {
     width: 270px;
     margin-bottom: 40px;
+    
+ }
 
+.results {
+     padding: 20px;
+     margin-bottom: 5px;
+     margin: 20px;
+     display: flex;
+     -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+     
 }
 
+
+
 .thumbnail {
-    padding-bottom: 20px;
-    height: 140px;
-    width: 250px;
-    padding-top: 40px;
+    height: 240px;
+    width: 360px;
+    border: 1px solid #eee;
+    word-wrap: normal;
+    box-shadow: 2px 1px 2px rgb(104, 102, 102); -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
 
 } 
 
+@keyframes bounce {
+    0%, 100%, 20%, 50%, 80% {
+        -webkit-transform: translateY(0);
+        -ms-transform:     translateY(0);
+        transform:         translateY(0)
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        -ms-transform:     translateY(-30px);
+        transform:         translateY(-30px)
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        -ms-transform:     translateY(-15px);
+        transform:         translateY(-15px)
+    }
+}
+
+.thumbnail:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
 
 .video-text {
     margin-left: 15px;
 }
-
-.video-title > h4 {
+.video-text > h4 {
+    margin-top: 10px;
+    font-size: 20px;
     margin-bottom: 5px;
-    color: #5a5e62;
+    color: #06299d;
     }
+/* .video-title > h4 {
+    margin-bottom: 5px;
+    color: #8d0808;
+    } */
+    /* .video-text > p {
+        font-size: 14px;
+        color: #000000;
+    } */
 
-.video-text > p {
-    font-size: 16px;
-    color: #1f0642;
+/* .video-info {
     display: flex;
-    word-wrap: normal;
-    font-family: 'Shadows Into Light Two', cursive;
-    margin-bottom: 5px;
-    }
+    margin-top: 10px;
+    padding-right: 30px;
+        
+} */

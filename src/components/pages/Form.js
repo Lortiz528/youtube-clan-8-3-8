@@ -64,7 +64,7 @@ class Form extends React.Component {
           <div>
             <ul>
               {comments.map((comment,ind) => (
-                <li key={ind}>{comment}</li>
+                <h5 key={ind}>{comment}</h5>
               ))}
             </ul>
           </div>

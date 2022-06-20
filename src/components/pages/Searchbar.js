@@ -14,7 +14,7 @@ class Searchbar extends React.Component {
             placeholder="Search"
           ></input>
           <button className='search-button' id="submit-button" type="submit"  >
-            <img className='search-icon' src='https://static.thenounproject.com/png/3134345-200.png' ></img>
+            <img className='search-icon' src='https://static.thenounproject.com/png/3134345-200.png' alt='search'></img>
           </button>
           </div>
         </form>
