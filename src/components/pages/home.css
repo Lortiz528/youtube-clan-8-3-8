@@ -31,12 +31,34 @@
     
 }
 .results {
-    display: flex;
+    width: 270px;
+    margin-bottom: 40px;
+
 }
 
 .thumbnail {
     padding-bottom: 20px;
     height: 140px;
     width: 250px;
-    padding-top: 10px;
+    padding-top: 40px;
+
 } 
+
+
+.video-text {
+    margin-left: 15px;
+}
+
+.video-title > h4 {
+    margin-bottom: 5px;
+    color: #5a5e62;
+    }
+
+.video-text > p {
+    font-size: 16px;
+    color: #1f0642;
+    display: flex;
+    word-wrap: normal;
+    font-family: 'Shadows Into Light Two', cursive;
+    margin-bottom: 5px;
+    }

@@ -25,15 +25,13 @@ class Navbar extends React.Component {
     return (
       <nav>
         <Header clearSearch={this.clearSearch} />
-        <Link to="/">
-          <h3>Home</h3>
-        </Link>
+       
         <div className='special-icons'>
       <VideoCallIcon className='iconic'/>
       <AppsIcon className='iconic'/>
-      <Link to="/about"><NotificationsIcon className='iconic'/> </Link>
-      <Avatar 
-      src='https://www.digitaltveurope.com/files/2019/12/Baby-Yoda-Soup.jpg' alt='Baby Yoda' />
+      <NotificationsIcon className='iconic'/>
+      <Link to="/about"><Avatar 
+      src='https://www.digitaltveurope.com/files/2019/12/Baby-Yoda-Soup.jpg' alt='Baby Yoda' /></Link>
       </div>
       </nav>
     );

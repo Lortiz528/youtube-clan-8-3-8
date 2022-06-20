@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Searchbar from './Searchbar';
-import './home.css'
+import { Avatar } from '@mui/material';
+import './home.css';
 
 class Home extends React.Component {
   constructor() {
@@ -31,7 +32,7 @@ class Home extends React.Component {
 
   handleApi = (userInput) => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=2&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=2&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`,
     )
       .then((response) => response.json())
       .then((json) => {
@@ -46,15 +47,25 @@ class Home extends React.Component {
 
     let tubes = searchResults.map((video) => {
       return (
-        <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-          <div className='results'>
-            <img className='thumbnail'
-              src={video.snippet.thumbnails.default.url}
-              alt={video.snippet.description}
-            />
-            <div className='video-title'>{video.snippet.title}</div>
+        <div>
+          <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
+            <div className='results'>
+              <img
+                className='thumbnail'
+                src={video.snippet.thumbnails.medium.url}
+                alt={video.snippet.description}
+              />
+              <div className='video-title'>
+                {' '}
+                <h4>{video.snippet.title}</h4>{' '}
+              </div>
+            </div>
+          </Link>
+          <div className='video-text'>
+            <p>{video.snippet.channelTitle}</p>
+            <p>{video.snippet.description}</p>
           </div>
-        </Link>
+        </div>
       );
     });
 
@@ -69,7 +80,9 @@ class Home extends React.Component {
           />
         </div>
         {!this.state.searchResults.length ? (
-           <div className='no-results' ><h4>No Search Results Yet!, Please submit a search above!</h4></div>
+          <div className='no-results'>
+            <h4>No Search Results Yet!, Please submit a search above!</h4>
+          </div>
         ) : null}
         {tubes}
       </div>

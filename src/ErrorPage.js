@@ -19,7 +19,7 @@ const ErrorPage = props  => {
            <img className="page404" src="https://fads.org.in/assets/public/img/404.gif" alt="404" ></img>
         </div>
         <div className="modal-footer">
-          <button className="error-button" onClick={props}>Back to Home</button>
+          <button className="error-button" onClick={props.closeButton}>X</button>
         </div>
       </div>
     </div>
