@@ -1,3 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 footer {
     position: fixed;
     width: 100%;
@@ -20,17 +26,23 @@ footer {
  .profile{
     height: 150px;
     width: 150px;
+    border-radius: 15px;
+    box-shadow: 2px 1px 2px rgb(104, 102, 102);
 }
 
 .wrapper{
-  text-align: center;
+ text-align: center;
 }
 
 .aboutpage{ 
   font-family: 'Shadows Into Light Two', cursive;
 font-size: large;
 align-items: center;
+text-align: center;
 overflow-wrap: break-word;
+margin: auto;
+background-color: rgb(223, 220, 216);
+
 }
 
 .formbtn {
@@ -57,4 +69,3 @@ overflow-wrap: break-word;
   flex-wrap: wrap;
   
 }
-
