@@ -9,12 +9,11 @@ import Video from './components/pages/Video';
 import ErrorPage from './ErrorPage';
 
 export default function App () {
-const [show, setShow] = useState(false)
+
    
     return (
       <div className="App">
-       <button onClick={()=> setShow(true)}>Show Modal</button><ErrorPage show={show}/>
-        
+      
      
           <Navbar />
         
