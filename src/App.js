@@ -1,30 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import Navbar from './components/common/Navbar';
 import { Routes, Route } from 'react-router-dom';
+
 import About from './components/pages/About';
 import Home from './components/pages/Home';
 import Footer from './components/common/Footer';
-import Video from './components/pages/Video';
-import ErrorPage from './ErrorPage';
 
-export default function App () {
-const [show, setShow] = useState(false)
-   
+import Video from './components/pages/Video';
+
+
+class App extends React.Component {
+
+  render() {
     return (
       <div className="App">
-       <button onClick={()=> setShow(true)}>Show Modal</button><ErrorPage show={show}/>
-        
-     
+        <div className="NavBAR">
           <Navbar />
-        
-        
+        </div>
         <div className="wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/videos/:id" element={<Video />} />
-            <Route path="*" element={<ErrorPage/>} />
           </Routes>
         </div>
        
@@ -32,6 +30,6 @@ const [show, setShow] = useState(false)
       </div>
     );
   }
+}
 
-
- 
+export default App;
