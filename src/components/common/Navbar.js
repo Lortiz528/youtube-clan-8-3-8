@@ -1,7 +1,11 @@
 import Header from './Header';
-
 import { Link } from 'react-router-dom';
+import VideoCallIcon from "@mui/icons-material/VideoCall"
+import AppsIcon from "@mui/icons-material/Apps"
+import  NotificationsIcon  from '@mui/icons-material/Notifications';
+import { Avatar } from '@mui/material';
 import React from 'react';
+import "./navbar.css"
 
 class Navbar extends React.Component {
   constructor() {
@@ -24,6 +28,13 @@ class Navbar extends React.Component {
         <Link to="/">
           <h3>Home</h3>
         </Link>
+        <div className='special-icons'>
+      <VideoCallIcon className='iconic'/>
+      <AppsIcon className='iconic'/>
+      <Link to="/about"><NotificationsIcon className='iconic'/> </Link>
+      <Avatar 
+      src='https://www.digitaltveurope.com/files/2019/12/Baby-Yoda-Soup.jpg' alt='Baby Yoda' />
+      </div>
       </nav>
     );
   }

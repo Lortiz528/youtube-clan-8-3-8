@@ -1,4 +1,5 @@
 import React from 'react';
+import MenuIcon from '@mui/icons-material/MenuSharp';
 import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
@@ -6,9 +7,10 @@ class Header extends React.Component {
     const { clearSearch } = this.props;
     return (
       <header>
+         <MenuIcon />
         <Link to="/" onClick={clearSearch}>
-          <img
-            src="https://1000logos.net/wp-content/uploads/2017/05/YouTube-Logo-2015.jpg"
+          <img className='logo'
+            src="https://thumbs.gfycat.com/PhysicalAlertBeaver-max-1mb.gif"
             alt="youtube"
           />
         </Link>

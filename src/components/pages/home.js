@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Searchbar from './Searchbar';
+import './home.css'
 
 class Home extends React.Component {
   constructor() {
@@ -30,7 +31,7 @@ class Home extends React.Component {
 
   handleApi = (userInput) => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=2&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`
     )
       .then((response) => response.json())
       .then((json) => {
@@ -46,19 +47,19 @@ class Home extends React.Component {
     let tubes = searchResults.map((video) => {
       return (
         <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-          <div>
-            <img
+          <div className='results'>
+            <img className='thumbnail'
               src={video.snippet.thumbnails.default.url}
               alt={video.snippet.description}
             />
-            <div>{video.snippet.title}</div>
+            <div className='video-title'>{video.snippet.title}</div>
           </div>
         </Link>
       );
     });
 
     return (
-      <div>
+      <div className='home-page'>
         <div>
           <Searchbar
             searchHandler={this.searchHandler}
@@ -68,7 +69,7 @@ class Home extends React.Component {
           />
         </div>
         {!this.state.searchResults.length ? (
-          <h4>No Search Results Yet!, Please submit a search above!</h4>
+           <div className='no-results' ><h4>No Search Results Yet!, Please submit a search above!</h4></div>
         ) : null}
         {tubes}
       </div>

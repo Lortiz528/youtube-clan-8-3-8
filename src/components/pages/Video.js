@@ -12,6 +12,7 @@ function Video() {
         <YouTube videoId={videoId} />
       </section>
       <section>
+      <hr></hr>
         <Form />
       </section>
     </div>

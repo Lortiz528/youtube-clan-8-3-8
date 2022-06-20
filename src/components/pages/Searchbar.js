@@ -6,15 +6,17 @@ class Searchbar extends React.Component {
     return (
       <div>
         <form onSubmit={(event) => searchHandler(event)}>
-          <input
+        <div className='input-container'> 
+          <input 
             onChange={inputHandler}
             value={userInput}
             type="text"
             placeholder="Search"
           ></input>
-          <button id="submit-button" type="submit">
-            Search
+          <button className='search-button' id="submit-button" type="submit"  >
+            <img className='search-icon' src='https://static.thenounproject.com/png/3134345-200.png' ></img>
           </button>
+          </div>
         </form>
         <br></br>
       </div>

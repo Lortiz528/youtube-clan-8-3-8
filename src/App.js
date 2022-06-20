@@ -1,28 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/common/Navbar';
 import { Routes, Route } from 'react-router-dom';
-
 import About from './components/pages/About';
 import Home from './components/pages/Home';
 import Footer from './components/common/Footer';
-
 import Video from './components/pages/Video';
+import ErrorPage from './ErrorPage';
 
-
-class App extends React.Component {
-
-  render() {
+export default function App () {
+const [show, setShow] = useState(false)
+   
     return (
       <div className="App">
-        <div className="NavBAR">
+       <button onClick={()=> setShow(true)}>Show Modal</button><ErrorPage show={show}/>
+        
+     
           <Navbar />
-        </div>
+        
+        
         <div className="wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/videos/:id" element={<Video />} />
+            <Route path="*" element={<ErrorPage/>} />
           </Routes>
         </div>
        
@@ -30,6 +32,6 @@ class App extends React.Component {
       </div>
     );
   }
-}
 
-export default App;
+
+ 

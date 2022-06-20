@@ -36,8 +36,10 @@ class Form extends React.Component {
         <section className='notes'>
           <h5>Comments</h5>
           <form onSubmit={this.handleSubmit}>
-            <label>  Name:  </label>
+            <label>  Name  </label>
             <input
+              className="user-input"
+              placeholder="Name..."
               id='text'
               name='value'
               type='text'
@@ -45,9 +47,10 @@ class Form extends React.Component {
               onChange={this.name}
             />
             <br />
-            <br />
-            <label> Comment: </label>
+            <label> Comment </label>
             <input
+              className="user-input"
+              placeholder="..."
               id='text'
               name='value'
               type='text'
@@ -55,9 +58,9 @@ class Form extends React.Component {
               onChange={this.commenting}
             />
             <br />
-            <br />
-            <button type='submit'>Add Note</button>
+            <button className="formbtn" type='submit'>Submit</button>
           </form>
+          <hr></hr>
           <div>
             <ul>
               {comments.map((comment,ind) => (

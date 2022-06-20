@@ -1,26 +1,30 @@
 import React from "react";
 import "./Error404.css"
 
-function ErrorPage(props) { 
+
+const ErrorPage = props  => {
+ 
+ 
+  if (!props.show) {
+  return null
+ }
+ 
   return (
-    < ErrorPage {...props}
-    size='lg'
-    aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
     <div className="modal">
       <div className="modal-content">
         <div className="modal-header">
-          <h4 className="title">ERROR 404</h4>
+          <h4 className="title">Uh oh, You've found a page that doesn't exist</h4>
         </div>
         <div className="modal-body">
-          some image here
+           <img className="page404" src="https://fads.org.in/assets/public/img/404.gif" alt="404" ></img>
         </div>
         <div className="modal-footer">
-          <button className="error-button">Close</button>
+          <button className="error-button" onClick={props}>Back to Home</button>
         </div>
       </div>
     </div>
-    </ErrorPage>
+
   )
 }
+
+export default ErrorPage

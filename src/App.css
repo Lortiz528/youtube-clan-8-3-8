@@ -1,35 +1,60 @@
 footer {
     position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    background-color: red;
+    height: 5%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-color: #6bdede; */
+    background: rgb(106,106,138);
+    background: linear-gradient(90deg, rgba(106,106,138,1) 0%, rgba(199,199,201,1) 0%, rgba(255,255,255,1) 100%);
     color: white;
-    text-align: center;
- 
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    clear: both;
+    opacity: 0.9;
+    align-items: center;
   }
 
-  img{
+ .profile{
     height: 150px;
     width: 150px;
-}
-
-nav{
-display: grid;
-grid-template-columns:repeat(4, 1fr);
-    background-color:red;
-}
-
-.NavBAR{
-  padding-bottom: 20px;
-}
-
-
-button{
-  background-color: salmon;
-  border-radius: 20px;
 }
 
 .wrapper{
   text-align: center;
 }
+
+.aboutpage{ 
+  font-family: 'Shadows Into Light Two', cursive;
+font-size: large;
+align-items: center;
+overflow-wrap: break-word;
+}
+
+.formbtn {
+  color: white;
+  background-color: steelblue;
+}
+
+
+.user-input{
+  display: flex;
+  width: 40%;
+  border: 1px solid #d3d3d3;
+  margin: auto;
+  margin-top: 15px;
+ 
+}
+.user-input > input {
+  flex: 1;
+  border: none;
+
+}
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
