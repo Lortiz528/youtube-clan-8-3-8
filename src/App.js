@@ -9,15 +9,15 @@ import Footer from './components/common/Footer';
 
 import Video from './components/pages/Video';
 
+export default function App () {
 
-class App extends React.Component {
-
-  render() {
+   
     return (
       <div className="App">
-        <div className="NavBAR">
+      
+     
           <Navbar />
-        </div>
+        
         <div className="wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -30,6 +30,4 @@ class App extends React.Component {
       </div>
     );
   }
-}
 
-export default App;
