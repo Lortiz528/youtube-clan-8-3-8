@@ -33,3 +33,10 @@
 .results {
     display: flex;
 }
+
+.thumbnail {
+    padding-bottom: 20px;
+    height: 140px;
+    width: 250px;
+    padding-top: 10px;
+} 

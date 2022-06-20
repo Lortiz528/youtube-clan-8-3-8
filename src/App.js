@@ -8,7 +8,6 @@ import Footer from './components/common/Footer';
 import Video from './components/pages/Video';
 import ErrorPage from './ErrorPage';
 
-
 export default function App () {
 const [show, setShow] = useState(false)
    
@@ -25,7 +24,7 @@ const [show, setShow] = useState(false)
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/videos/:id" element={<Video />} />
-            <Route path="*" element={<ErrorPage />} />
+            <Route path="*" element={<ErrorPage/>} />
           </Routes>
         </div>
        

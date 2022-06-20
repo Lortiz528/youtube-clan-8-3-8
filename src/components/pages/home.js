@@ -31,7 +31,7 @@ class Home extends React.Component {
 
   handleApi = (userInput) => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=2&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`
     )
       .then((response) => response.json())
       .then((json) => {
@@ -48,11 +48,11 @@ class Home extends React.Component {
       return (
         <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
           <div className='results'>
-            <img
+            <img className='thumbnail'
               src={video.snippet.thumbnails.default.url}
               alt={video.snippet.description}
             />
-            <div>{video.snippet.title}</div>
+            <div className='video-title'>{video.snippet.title}</div>
           </div>
         </Link>
       );

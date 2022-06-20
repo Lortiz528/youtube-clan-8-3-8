@@ -32,3 +32,29 @@ font-size: large;
 align-items: center;
 overflow-wrap: break-word;
 }
+
+.formbtn {
+  color: white;
+  background-color: steelblue;
+}
+
+
+.user-input{
+  display: flex;
+  width: 40%;
+  border: 1px solid #d3d3d3;
+  margin: auto;
+  margin-top: 15px;
+ 
+}
+.user-input > input {
+  flex: 1;
+  border: none;
+
+}
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+

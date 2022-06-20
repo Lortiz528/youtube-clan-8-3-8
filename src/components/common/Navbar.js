@@ -31,7 +31,7 @@ class Navbar extends React.Component {
         <div className='special-icons'>
       <VideoCallIcon className='iconic'/>
       <AppsIcon className='iconic'/>
-      <NotificationsIcon className='iconic'/>
+      <Link to="/about"><NotificationsIcon className='iconic'/> </Link>
       <Avatar 
       src='https://www.digitaltveurope.com/files/2019/12/Baby-Yoda-Soup.jpg' alt='Baby Yoda' />
       </div>
