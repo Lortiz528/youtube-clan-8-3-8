@@ -1,4 +1,4 @@
-  .modal {
+/* .Modal {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,54 +9,80 @@
     bottom: 0;
     background-color: rgb(0, 0, 0, 0.5);
     color: rgb(0, 0, 0);
-} 
+}  
 
-.modal-content {
-    width: 500px;
-    
+ .modal-content {
     background-color: #f8f7f7;
-}
-
-.modal-header,
-.modal-footer {
-    padding: 10px;
-}
-
-.modal-title {
-    text-align: center;
-}
-
-.modal-body {
-    padding: 10px;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    align-items: center;
-    margin: auto;
-    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    justify-items: center;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    overflow: hidden;
 
 }
+ 
 
-.error-button {
-background-color: #0182eb;;
-border-radius: 6px;
-font-family: 'Cormorant Garamond', serif;
-color: #eee;
-font-size: 18px ;
-} 
+
+
+
 
 
   
 
-  .page404 {
-    height: 200px;
-    width: 200px;
-    margin: auto;
+ 
+
+ 
+
+
+ */
+ .page404 {
+   
+    height: 400px;
+    width: 400px;
     box-shadow: 2px 1px 2px rgb(104, 102, 102);
+    margin-top: 50px;
+    margin-right: 30%;
 }
 
-.title {
-    color: #0182eb;
-    font-size: x-large;
-    text-align: center;
-    font-family: 'Shadows Into Light Two', cursive;
-}
+.error-button {
+    margin-left: 2px;
+    margin-top: 5px;
+        background-color: #0182eb;;
+    border-radius: 6px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #eee;
+    font-size: 18px ;
+    padding: 5px;
+   
+    
+    }  
+
+    .modal-body {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        padding: 10px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+       margin-top: 5%;
+       left: 0;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       overflow: hidden;
+    } 
+
+    .title {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-weight: 500;
+        color: #0182eb;
+        font-size: 40px;
+        font-family: 'Shadows Into Light Two', cursive;
+        flex-wrap: wrap;       
+    
+    } 
