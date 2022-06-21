@@ -21,7 +21,7 @@ const ErrorPage = props  => {
         </div>
         <div className="modal-footer">
         <Link to="/">
-          <button  className="error-button">Hurry Go Back to the Homepage!</button>
+          <button  className="error-button">Hurry! Go Back Home!</button>
           </Link>
         </div>
       </div>
