@@ -2,8 +2,10 @@ export default function About() {
   return (
     <div className="aboutpage">
       <div>
-        <article>Welcome to our YouTube Clone. Enables a search feature to find any  video within the youtube data api, Once video is selected you may watch and leave a comment. 
-        Thank you
+        <article>
+          Welcome to our YouTube Clone. Enables a search feature to find any
+          video within the youtube data API. Once a video is selected, you may
+          watch and leave a comment. Thank you!
         </article>
       </div>
       <br />
@@ -13,7 +15,8 @@ export default function About() {
       <div>
         <div>
           <h3>Luis Ortiz</h3>
-          <img className="profile"
+          <img
+            className="profile"
             src="https://avatars.githubusercontent.com/u/96318347?v=4"
             alt="Luis"
           />
@@ -33,7 +36,8 @@ export default function About() {
 
         <div>
           <h3>Jossy Pascasio</h3>
-          <img className="profile"
+          <img
+            className="profile"
             src="https://avatars.githubusercontent.com/u/96319104?v=4"
             alt="Josie"
           />
@@ -43,11 +47,13 @@ export default function About() {
             Administration. I am a naturally curious person which makes me want
             to always learn new things, a problem-solver who questions
             everything, and a hard worker who doesn't take life too seriously
-            and enjoys the  little small things in life like pizza.🍕
+            and enjoys the little small things in life like pizza.🍕
           </p>
           <a href="https://github.com/named-josie">Jossy's GitHub</a>
           <br></br>
-          <a href="https://www.linkedin.com/in/jossy-p-b1496922a/">Jossy's' LinkedIn</a>
+          <a href="https://www.linkedin.com/in/jossy-p-b1496922a/">
+            Jossy's' LinkedIn
+          </a>
         </div>
         {/* <div>
           <h3>Stephanie Frias</h3>
