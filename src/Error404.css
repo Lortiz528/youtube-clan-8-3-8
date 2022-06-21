@@ -37,8 +37,11 @@
 }
 
 .error-button {
-background-color: #eee;
+background-color: #0182eb;;
 border-radius: 6px;
+font-family: 'Cormorant Garamond', serif;
+color: #eee;
+font-size: 18px ;
 } 
 
 
@@ -48,11 +51,11 @@ border-radius: 6px;
     height: 200px;
     width: 200px;
     margin: auto;
-  
+    box-shadow: 2px 1px 2px rgb(104, 102, 102);
 }
 
 .title {
-    color: rgb(91, 48, 152);
+    color: #0182eb;
     font-size: x-large;
     text-align: center;
     font-family: 'Shadows Into Light Two', cursive;
