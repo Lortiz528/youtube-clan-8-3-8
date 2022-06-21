@@ -14,7 +14,7 @@ class Form extends React.Component {
       event.preventDefault()
       console.log(event)
       let { comments, userName, comment } = this.state
-      let newComment = `${userName} :  "${comment}"`
+      let newComment = `${userName}:  ${comment}`
       this.setState({ comments: [...comments, newComment] })
       event.target.reset()
     }
@@ -34,9 +34,10 @@ class Form extends React.Component {
   
       return (
         <section className='notes'>
-          <h5>Comments</h5>
+          <h3 className="comment-title" >Comment</h3>
+          <br></br>
           <form onSubmit={this.handleSubmit}>
-            <label>  Name  </label>
+            <label className="user-label">  Name  </label>
             <input
               className="user-input"
               placeholder="Name..."
@@ -47,11 +48,11 @@ class Form extends React.Component {
               onChange={this.name}
             />
             <br />
-            <label> Comment </label>
+            <label className="user-label"> Comment </label>
             <input
               className="user-input"
               placeholder="..."
-              id='text'
+              id='comment-box'
               name='value'
               type='text'
               value={comment}
@@ -59,14 +60,17 @@ class Form extends React.Component {
             />
             <br />
             <button className="formbtn" type='submit'>Submit</button>
+            <br />
+            <br />
+            <br />
           </form>
           <hr></hr>
-          <div>
-            <ul>
+          <div className="comment-results">
+            <p>
               {comments.map((comment,ind) => (
                 <h5 key={ind}>{comment}</h5>
               ))}
-            </ul>
+            </p>
           </div>
         </section>
       )
