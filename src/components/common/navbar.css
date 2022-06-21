@@ -7,7 +7,7 @@ nav{
     top: 0;
     z-index: 999;
    width: 100%;
-   background-color: #faf9fb;
+   background-color: #d6dbe1;
 }
 
   .logo {
@@ -15,17 +15,19 @@ nav{
   margin-left: 20px;
   object-fit: contain;
   border-radius: 10px;
+  box-shadow: 2px 1px 2px rgb(104, 102, 102); 
    }
 
    .special-icons {
     display: flex;
     align-items: center;
+    
     }
     .other-icons:hover {
-        color: #ba1d1d !important;
+        color: #1c6aaa !important;
         }
     .special-icons :hover {
-        color: #ba1d1d !important;
+        color: #1c6aaa !important;
         }
 
     .iconic {
