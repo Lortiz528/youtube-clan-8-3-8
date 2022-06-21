@@ -25,8 +25,11 @@ export default function About() {
             position as a developer with a company actively trying to better our
             world.
           </p>
-          <a href="https://github.com/Lortiz528">Luis's GitHub</a>
+          <a href="https://github.com/Lortiz528">Luis' GitHub</a>
+          <br></br>
+          <a href="https://www.linkedin.com/in/lortiz528/">Luis' LinkedIn</a>
         </div>
+        <br></br>
 
         <div>
           <h3>Jossy Pascasio</h3>
@@ -43,8 +46,10 @@ export default function About() {
             and enjoys the  little small things in life like pizza.🍕
           </p>
           <a href="https://github.com/named-josie">Jossy's GitHub</a>
+          <br></br>
+          <a href="https://www.linkedin.com/in/jossy-p-b1496922a/">Jossy's' LinkedIn</a>
         </div>
-        <div>
+        {/* <div>
           <h3>Stephanie Frias</h3>
           <img className="profile"
             src="https://avatars.githubusercontent.com/u/96318625?v=4"
@@ -52,7 +57,7 @@ export default function About() {
           />
           <p>Stephanie's about paragraph</p>
           <a href="https://github.com/stephfrias">Stephanie's GitHub</a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
