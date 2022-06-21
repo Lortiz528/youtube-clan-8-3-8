@@ -32,7 +32,7 @@ class Home extends React.Component {
 
   handleApi = (userInput) => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=2&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`
     )
       .then((response) => response.json())
       .then((json) => {
