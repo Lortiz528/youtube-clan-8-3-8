@@ -7,7 +7,7 @@ class Header extends React.Component {
     const { clearSearch } = this.props;
     return (
       <header>
-         <MenuIcon className='other-icons' />
+         <MenuIcon />
         <Link to="/" onClick={clearSearch}>
           <img className='logo'
             src="https://thumbs.gfycat.com/PhysicalAlertBeaver-max-1mb.gif"

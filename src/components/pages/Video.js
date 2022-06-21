@@ -7,7 +7,7 @@ function Video() {
   const videoId = useParams().id;
 
   return (
-    <div className='video'>
+    <div>
       <section>
         <YouTube videoId={videoId} />
       </section>
