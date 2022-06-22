@@ -112,3 +112,9 @@ background-color:#e9eff5;
   justify-content: center;
 
 }
+
+.year{
+  background-color: #d3d3d3;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px
+}

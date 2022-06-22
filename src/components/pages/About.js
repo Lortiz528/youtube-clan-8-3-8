@@ -1,4 +1,5 @@
 export default function About() {
+  const year = new Date().getFullYear();
   return (
     <div className="aboutpage">
       <div>
@@ -96,6 +97,9 @@ export default function About() {
               />
             </a>
           </div>
+          <br></br>
+          <hr></hr>
+          <div className="year">{year}</div>
         </div>
         {/* <div>
           <h3>Stephanie Frias</h3>
