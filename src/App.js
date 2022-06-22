@@ -2,15 +2,10 @@
 import './App.css';
 import Navbar from './components/common/Navbar';
 import { Routes, Route } from 'react-router-dom';
-
 import About from './components/pages/About';
 import Home from './components/pages/Home';
-
-
-import  ErrorPage from "./ErrorPage"
-
+import ErrorPage from './ErrorPage';
 import Video from './components/pages/Video';
-
 
 export default function App() {
   return (
@@ -22,7 +17,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/videos/:id" element={<Video />} />
-          <Route path='*' element={< ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
 

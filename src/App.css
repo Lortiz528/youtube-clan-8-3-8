@@ -92,3 +92,15 @@ background-color:#e9eff5;
   font-family: 'Shadows Into Light Two', cursive;
   font-size: 27px;
 }
+
+.links{
+  justify-content: space-between;
+  display: flex
+}
+
+.github{
+  font-weight: 500;
+  font-size: 32px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 1%;
+}
