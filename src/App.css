@@ -104,3 +104,11 @@ background-color:#e9eff5;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin-top: 1%;
 }
+
+.comment-results{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  justify-content: center;
+
+}

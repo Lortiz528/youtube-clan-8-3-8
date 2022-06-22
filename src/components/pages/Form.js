@@ -14,10 +14,9 @@ class Form extends React.Component {
     };
   }
 
-
   /**
    * Updates state with user name and their comment, adds the name/comment values to list of comments for the video
-   * @param {*} event 
+   * @param {*} event
    */
   handleSubmit = (event) => {
     event.preventDefault();
@@ -32,10 +31,10 @@ class Form extends React.Component {
     // event.target.reset()
   };
 
-/**
- * updates the username state with user input
- * @param {*} event 
- */
+  /**
+   * updates the username state with user input
+   * @param {*} event
+   */
 
   name = (event) => {
     const { value } = event.target;
@@ -43,9 +42,9 @@ class Form extends React.Component {
   };
 
   /**
- * updates the comment state with user input
- * @param {*} event 
- */
+   * updates the comment state with user input
+   * @param {*} event
+   */
   commenting = (event) => {
     const { value } = event.target;
     this.setState({ comment: value });
@@ -56,7 +55,8 @@ class Form extends React.Component {
 
     return (
       <section className="notes">
-        <h3 className="comment-title">Comment</h3>
+        {/* <h3 className="comment-title">Comment</h3> */}
+        <h3 className="comment-title">Comment Here 👇</h3>
         <br></br>
         <form onSubmit={this.handleSubmit}>
           <label className="user-label"> Name </label>
@@ -68,6 +68,7 @@ class Form extends React.Component {
             type="text"
             value={userName}
             onChange={this.name}
+            required
           />
           <br />
           <label className="user-label"> Comment </label>
@@ -79,6 +80,7 @@ class Form extends React.Component {
             type="text"
             value={comment}
             onChange={this.commenting}
+            required
           />
           <br />
           <button className="formbtn" type="submit">
@@ -89,6 +91,7 @@ class Form extends React.Component {
           <br />
         </form>
         <hr></hr>
+
         <div className="comment-results">
           <p>
             {comments.map((comment, ind) => (
