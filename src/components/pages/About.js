@@ -101,15 +101,6 @@ export default function About() {
           <hr></hr>
           <div className="year">{year}</div>
         </div>
-        {/* <div>
-          <h3>Stephanie Frias</h3>
-          <img className="profile"
-            src="https://avatars.githubusercontent.com/u/96318625?v=4"
-            alt="Stephanie"
-          />
-          <p>Stephanie's about paragraph</p>
-          <a href="https://github.com/stephfrias">Stephanie's GitHub</a>
-        </div> */}
       </div>
     </div>
   );
