@@ -1,7 +1,6 @@
 # Group members: Luis Ortiz and Josie Pascasio.
-[Trello](https://trello.com/b/szRH7WzT/project-management-for-youtube/ "trello")
 
-Trello Board link: https://trello.com/b/szRH7WzT/project-management-for-youtube
+[Trello](https://trello.com/b/szRH7WzT/project-management-for-youtube/ "trello")
 
 
 
