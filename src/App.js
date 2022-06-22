@@ -1,4 +1,3 @@
-// import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/common/Navbar';
 import { Routes, Route } from 'react-router-dom';
@@ -17,11 +16,9 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/videos/:id" element={<Video />} />
-          <Route path="/:ErrorPage" element={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
-
-      {/* <Footer /> */}
     </div>
   );
 }
